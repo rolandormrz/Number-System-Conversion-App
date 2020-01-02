@@ -29,7 +29,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="decimalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qxs-Xx-LXv"/>
+                                                    <action selector="decimalBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4h7-FZ-lX9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsI-3g-Ks4">
@@ -40,7 +40,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="binaryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TJa-we-2J9"/>
+                                                    <action selector="binaryBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNN-oQ-J4X"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2K-Xe-nwG">
@@ -51,7 +51,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="octalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YgM-VY-skU"/>
+                                                    <action selector="octalBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qzj-Pz-nIZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcY-Lt-9Mp">
@@ -62,7 +62,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="hexButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B0B-Rd-mZi"/>
+                                                    <action selector="hexBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQv-JC-LFR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -78,7 +78,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="zeroButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WIc-02-qWu"/>
+                                                    <action selector="zeroBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDO-AY-XXc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufa-Op-tg1">
@@ -89,7 +89,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="undoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v8K-BL-m5Z"/>
+                                                    <action selector="undoBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JGX-vH-pJQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmw-M9-eQ9">
@@ -100,7 +100,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="63y-M3-o4f"/>
+                                                    <action selector="clearBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oog-Vj-Fjl"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -119,7 +119,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="oneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="InA-YT-4Fu"/>
+                                                    <action selector="oneBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTA-jO-uXv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmM-5i-yj3">
@@ -130,7 +130,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="twoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UpC-th-byH"/>
+                                                    <action selector="twoBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="68m-dN-fNl"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-yX-xcb">
@@ -141,7 +141,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="threeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DPW-EZ-S7I"/>
+                                                    <action selector="threeBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYf-V6-qxL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vf5-6q-fXM">
@@ -152,7 +152,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="AButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chO-hq-M8u"/>
+                                                    <action selector="ABtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D8X-F2-ztQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haG-fK-RW9">
@@ -163,7 +163,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="BButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdR-fO-fmk"/>
+                                                    <action selector="BBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VxF-D3-6UF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -179,7 +179,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="fourButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LcG-VW-NrW"/>
+                                                    <action selector="fourBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RNH-V7-nd6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gp6-Ho-Idn">
@@ -190,7 +190,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="fiveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nt6-Rz-C7I"/>
+                                                    <action selector="fiveBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jvL-1p-msw"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhP-Xa-nvW">
@@ -201,7 +201,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="sixButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6AT-cZ-KfB"/>
+                                                    <action selector="sixBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QOk-jp-pqg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzm-gi-wNP">
@@ -212,7 +212,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="CButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4uL-Id-g72"/>
+                                                    <action selector="CBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLR-jO-iI4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dq-Yz-IHS">
@@ -223,7 +223,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="DButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4Q-0V-E8r"/>
+                                                    <action selector="DBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDm-U8-AxV"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -239,7 +239,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="sevenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9l6-cd-5uL"/>
+                                                    <action selector="sevenBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Cb-N5-j9K"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAC-M4-M5u">
@@ -250,7 +250,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="eightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmC-2H-Fkc"/>
+                                                    <action selector="eightBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fuC-Ub-Tve"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4s-ac-jdR">
@@ -261,7 +261,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="nineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rxY-vh-eQb"/>
+                                                    <action selector="nineBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T11-FQ-11S"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSG-1q-8ak">
@@ -272,7 +272,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="EButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bvc-Wk-sSg"/>
+                                                    <action selector="EBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hJU-fe-5wl"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgs-6D-f2d">
@@ -283,7 +283,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="FButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fDl-BW-YFE"/>
+                                                    <action selector="FBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vA4-ak-m3P"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -309,15 +309,27 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="AState" destination="Vf5-6q-fXM" id="tOI-nF-fhj"/>
-                        <outlet property="BState" destination="haG-fK-RW9" id="ouI-Ny-wzR"/>
-                        <outlet property="CState" destination="Wzm-gi-wNP" id="AqE-RL-Ef5"/>
-                        <outlet property="DState" destination="2dq-Yz-IHS" id="fbV-wW-60I"/>
-                        <outlet property="binaryMode" destination="QsI-3g-Ks4" id="cKD-ra-1Ka"/>
-                        <outlet property="decimalMode" destination="bw8-A7-ruY" id="MOm-Av-RRT"/>
+                        <outlet property="A_Btn" destination="Vf5-6q-fXM" id="N8M-jQ-g3Q"/>
+                        <outlet property="B_Btn" destination="haG-fK-RW9" id="pXg-0P-zGy"/>
+                        <outlet property="C_Btn" destination="Wzm-gi-wNP" id="3cE-q1-Biu"/>
+                        <outlet property="D_Btn" destination="2dq-Yz-IHS" id="Sta-pD-nvC"/>
+                        <outlet property="E_Btn" destination="gSG-1q-8ak" id="KAh-xR-faI"/>
+                        <outlet property="F_Btn" destination="pgs-6D-f2d" id="DnF-Gp-c1L"/>
+                        <outlet property="binaryBtn" destination="QsI-3g-Ks4" id="kmh-jO-LW4"/>
+                        <outlet property="decimalBtn" destination="bw8-A7-ruY" id="dnC-tf-wvB"/>
                         <outlet property="displayLabel" destination="f2B-17-VjS" id="NoS-75-vaJ"/>
-                        <outlet property="hexMode" destination="NcY-Lt-9Mp" id="LLj-g6-eaR"/>
-                        <outlet property="octalMode" destination="O2K-Xe-nwG" id="Gmp-6s-fes"/>
+                        <outlet property="eightBtn" destination="uAC-M4-M5u" id="q4f-Yo-M9j"/>
+                        <outlet property="fiveBtn" destination="gp6-Ho-Idn" id="RqZ-AG-qJI"/>
+                        <outlet property="fourBtn" destination="4lT-pC-Cdr" id="qiU-fX-X0P"/>
+                        <outlet property="hexBtn" destination="NcY-Lt-9Mp" id="jjV-Ye-HKU"/>
+                        <outlet property="nineBtn" destination="L4s-ac-jdR" id="QlR-cq-QQf"/>
+                        <outlet property="octalBtn" destination="O2K-Xe-nwG" id="lgV-HO-1yy"/>
+                        <outlet property="oneBtn" destination="Qc1-SC-zid" id="MUT-qa-moF"/>
+                        <outlet property="sevenBtn" destination="RL0-Hy-HFx" id="1Iw-FQ-Gpw"/>
+                        <outlet property="sixBtn" destination="hhP-Xa-nvW" id="h6A-Wh-Wgk"/>
+                        <outlet property="threeBtn" destination="ldV-yX-xcb" id="jBw-ry-bKU"/>
+                        <outlet property="twoBtn" destination="HmM-5i-yj3" id="Ka3-0f-RMJ"/>
+                        <outlet property="zeroBtn" destination="ESt-SZ-8tH" id="TnN-Z1-IxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
