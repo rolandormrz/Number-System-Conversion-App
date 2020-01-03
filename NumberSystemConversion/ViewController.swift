@@ -46,95 +46,123 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         decimalBtn.backgroundColor = .black
         letterBtnsState("not active")
+        
+        /*
+        zeroBtn.backgroundColor = .lightGray
+        zeroBtn.layer.cornerRadius = 5
+        zeroBtn.layer.borderWidth = 1
+        zeroBtn.layer.borderColor = UIColor.black.cgColor
+        */
     }
     
-    // switches the current mode's background to indicate it is no longer the active mode
+    // switches the current mode
     func switchMode(_ newMode: String) {
         switch currentMode {
-        case "decimal":
-            decimalBtn.backgroundColor = .darkGray
-            
-            if newMode == "binary" {
-                numBtnsState("active binary")
-                currentMode = "binary"
-                binaryBtn.backgroundColor = .black
+            case "decimal":
+                decimalBtn.backgroundColor = .darkGray
                 
-                displayLabel.text = decimalToBinary(displayLabel.text!)
-            }
-            else if newMode == "octal" {
-                currentMode = "octal"
-                octalBtn.backgroundColor = .black
-            }
-            else {
-                letterBtnsState("active")
-                currentMode = "hex"
-                hexBtn.backgroundColor = .black
-            }
-            
-        case "binary":
-            binaryBtn.backgroundColor = .darkGray
-            
-            if newMode == "decimal" {
-                numBtnsState("active")
-                currentMode = "decimal"
-                decimalBtn.backgroundColor = .black
+                if newMode == "binary" {
+                    numBtnsState("active binary")
+                    currentMode = "binary"
+                    binaryBtn.backgroundColor = .black
+                    
+                    displayLabel.text = decimalToBinary(displayLabel.text!)
+                }
+                else if newMode == "octal" {
+                    currentMode = "octal"
+                    octalBtn.backgroundColor = .black
+                    
+                    displayLabel.text = decimalToOctal(displayLabel.text!)
+                }
+                else {
+                    letterBtnsState("active")
+                    currentMode = "hex"
+                    hexBtn.backgroundColor = .black
+                    
+                    displayLabel.text = decimalToHex(displayLabel.text!)
+                }
                 
-                displayLabel.text = binaryToDecimal(displayLabel.text!)
-            }
-            else if newMode == "octal" {
-                numBtnsState("active")
-                currentMode = "octal"
-                octalBtn.backgroundColor = .black
-            }
-            else {
-                letterBtnsState("active")
-                currentMode = "hex"
-                hexBtn.backgroundColor = .black
-            }
-            
-        case "octal":
-            octalBtn.backgroundColor = .darkGray
-            
-            if newMode == "decimal" {
-                currentMode = "decimal"
-                decimalBtn.backgroundColor = .black
-            }
-            else if newMode == "binary" {
-                numBtnsState("active binary")
-                currentMode = "binary"
-                binaryBtn.backgroundColor = .black
-            }
-            else if newMode == "hex" {
-                numBtnsState("active binary")
-                letterBtnsState("active")
+            case "binary":
+                binaryBtn.backgroundColor = .darkGray
                 
-                currentMode = "hex"
-                hexBtn.backgroundColor = .black
-            }
+                if newMode == "decimal" {
+                    numBtnsState("active")
+                    currentMode = "decimal"
+                    decimalBtn.backgroundColor = .black
+                    
+                    displayLabel.text = binaryToDecimal(displayLabel.text!)
+                }
+                else if newMode == "octal" {
+                    numBtnsState("active")
+                    currentMode = "octal"
+                    octalBtn.backgroundColor = .black
+                    
+                    displayLabel.text = binaryToOctal(displayLabel.text!)
+                }
+                else {
+                    numBtnsState("active")
+                    letterBtnsState("active")
+                    currentMode = "hex"
+                    hexBtn.backgroundColor = .black
+                    
+                    displayLabel.text = binaryToHex(displayLabel.text!)
+                }
+                
+            case "octal":
+                octalBtn.backgroundColor = .darkGray
+                
+                if newMode == "decimal" {
+                    currentMode = "decimal"
+                    decimalBtn.backgroundColor = .black
+                    
+                    displayLabel.text = octalToDecimal(displayLabel.text!)
+                }
+                else if newMode == "binary" {
+                    numBtnsState("active binary")
+                    currentMode = "binary"
+                    binaryBtn.backgroundColor = .black
+                    
+                    displayLabel.text = octalToBinary(displayLabel.text!)
+                }
+                else {
+                    numBtnsState("active")
+                    letterBtnsState("active")
+                    currentMode = "hex"
+                    hexBtn.backgroundColor = .black
+                    
+                    displayLabel.text = octalToHex(displayLabel.text!)
+                }
 
-        case "hex":
-            hexBtn.backgroundColor = .darkGray
-            
-            if newMode == "decimal" {
-                numBtnsState("active")
-                letterBtnsState("not active")
-                currentMode = "decimal"
-                decimalBtn.backgroundColor = .black
-            }
-            else if newMode == "binary" {
-                letterBtnsState("not active")
-                currentMode = "binary"
-                binaryBtn.backgroundColor = .black
-            }
-            else {
-                letterBtnsState("not active")
-                numBtnsState("active")
-                currentMode = "octal"
-                octalBtn.backgroundColor = .black
-            }
-            
-        default:
-            print("Error! Something has gone horribly wrong with the switchMode function!")
+            case "hex":
+                hexBtn.backgroundColor = .darkGray
+                
+                if newMode == "decimal" {
+                    numBtnsState("active")
+                    letterBtnsState("not active")
+                    currentMode = "decimal"
+                    decimalBtn.backgroundColor = .black
+                    
+                    displayLabel.text = hexToDecimal(displayLabel.text!)
+                }
+                else if newMode == "binary" {
+                    numBtnsState("active binary")
+                    letterBtnsState("not active")
+                    currentMode = "binary"
+                    binaryBtn.backgroundColor = .black
+                    
+                    displayLabel.text = hexToBinary(displayLabel.text!)
+                }
+                else {
+                    letterBtnsState("not active")
+                    numBtnsState("active")
+                    currentMode = "octal"
+                    octalBtn.backgroundColor = .black
+                    
+                    displayLabel.text = hexToOctal(displayLabel.text!)
+                }
+                
+            default:
+                print("Error! Something has gone horribly wrong with the switchMode function!")
         }
     }
     
@@ -244,6 +272,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // functions for converting between bases
     func decimalToBinary(_ number: String) -> String {
         // convert the argument passed into an integer value
         var decimalValue: Int = Int(number) ?? 0
@@ -273,12 +302,84 @@ class ViewController: UIViewController {
         return result
     }
     
+    func decimalToOctal(_ input: String) -> String {
+        // convert the argument passed into an integer value
+        var decimalValue: Int = Int(input) ?? 0
+        
+        if decimalValue == 0 {
+            return String(decimalValue)
+        }
+        else if decimalValue == 1 {
+            return String(decimalValue)
+        }
+        
+        // stores the binary equivalent of the value passed in
+        var octalValue = [Int]()
+        
+        while (decimalValue > 0) {
+            octalValue.append(decimalValue % 8)
+            decimalValue /= 8
+        }
+        
+        octalValue.reverse()
+        
+        var result = ""
+        for value in octalValue {
+            result += String(value)
+        }
+        
+        return result
+    }
+    
+    func decimalToHex(_ input: String) -> String {
+        // convert the argument passed into an integer value
+        var decimalValue: Int = Int(input) ?? 0
+        
+        if decimalValue == 0 {
+            return String(decimalValue)
+        }
+        else if decimalValue == 1 {
+            return String(decimalValue)
+        }
+        
+        // stores the binary equivalent of the value passed in
+        var hexValue = [Int]()
+        
+        while (decimalValue > 0) {
+            hexValue.append(decimalValue % 16)
+            decimalValue /= 16
+        }
+        
+        hexValue.reverse()
+        
+        var result = ""
+        for value in hexValue {
+            switch value {
+                case 10:
+                    result += "A"
+                case 11:
+                    result += "B"
+                case 12:
+                    result += "C"
+                case 13:
+                    result += "D"
+                case 14:
+                    result += "E"
+                case 15:
+                    result += "F"
+                default:
+                    result += String(value)
+            }
+        }
+        
+        return result
+    }
     
     func binaryToDecimal(_ value: String) -> String {
-        var result: Double = 0.0
-        var power: Int = 0
+        var result = 0.0
+        var power = 0
         
-        let binaryValue: String = String(value.reversed())
+        let binaryValue:String = String(value.reversed())
         
         for char in binaryValue {
             if char != "0" {
@@ -288,6 +389,85 @@ class ViewController: UIViewController {
         }
         
         return String(Int(result))
+    }
+    
+    func binaryToOctal(_ input: String) -> String {
+        let decimalValue = binaryToDecimal(input)
+        return decimalToOctal(decimalValue)
+    }
+    
+    func binaryToHex(_ input: String) -> String {
+        let decimalValue = binaryToDecimal(input)
+        return decimalToHex(decimalValue)
+    }
+    
+    func octalToDecimal(_ input: String) -> String {
+        var result = 0.0
+        var power = 0
+        
+        let octalValue: String = String(input.reversed())
+        
+        for char in octalValue {
+            if char != "0" {
+                let temp = String(char)
+                result = result + (Double(Int(temp)!) * pow(Double(8), Double(power)))
+            }
+            power += 1
+        }
+        return String(Int(result))
+    }
+    
+    func octalToBinary(_ input: String) -> String {
+        let decimalValue = octalToDecimal(input)
+        return decimalToBinary(decimalValue)
+    }
+    
+    func octalToHex(_ input: String) -> String {
+        let decimalValue = octalToDecimal(input)
+        return decimalToHex(decimalValue)
+    }
+    
+    func hexToDecimal(_ input: String) -> String {
+        var result = 0.0
+        var power = 0
+        
+        let hexValue: String = String(input.reversed())
+        
+        for char in hexValue {
+            if char != "0" {
+                let temp = String(char)
+                
+                switch temp {
+                    case "A":
+                        result = result + (10 * pow(Double(16), Double(power)))
+                    case "B":
+                        result = result + (11 * pow(Double(16), Double(power)))
+                    case "C":
+                        result = result + (12 * pow(Double(16), Double(power)))
+                    case "D":
+                        result = result + (13 * pow(Double(16), Double(power)))
+                    case "E":
+                        result = result + (14 * pow(Double(16), Double(power)))
+                    case "F":
+                        result = result + (15 * pow(Double(16), Double(power)))
+                    default:
+                        result = result + (Double(Int(temp)!) * pow(Double(16), Double(power)))
+                }
+            }
+            power += 1
+        }
+        
+      return String(Int(result))
+    }
+    
+    func hexToBinary(_ input: String) -> String {
+        let decimalValue = hexToDecimal(input)
+        return decimalToBinary(decimalValue)
+    }
+    
+    func hexToOctal(_ input: String) -> String {
+        let decimalValue = hexToDecimal(input)
+        return decimalToOctal(decimalValue)
     }
     
 
@@ -404,7 +584,5 @@ class ViewController: UIViewController {
     @IBAction func FBtnPress(_ sender: Any) {
         displayLabel.text == "0" ? (displayLabel.text = "F") : (displayLabel.text = displayLabel.text! + "F")
     }
-    
-    
 }
 
