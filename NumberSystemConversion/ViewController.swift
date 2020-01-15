@@ -8,17 +8,23 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     @IBOutlet weak var displayLabel: UILabel!
     
     // current active mode
     var currentMode: String = "decimal"
     
+    @IBOutlet weak var newBtn: CustomUIButton!
+    
     // controls the background and available actions for each mode
     @IBOutlet weak var decimalBtn: UIButton!
     @IBOutlet weak var binaryBtn: UIButton!
     @IBOutlet weak var octalBtn: UIButton!
     @IBOutlet weak var hexBtn: UIButton!
+    
+    @IBOutlet weak var undoBtn: UIButton!
+    @IBOutlet weak var clearBtn: UIButton!
     
     // controls state for A-F buttons (whether or not they can be used based on the current mode)
     @IBOutlet weak var A_Btn: UIButton!
@@ -46,13 +52,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         decimalBtn.backgroundColor = .black
         letterBtnsState("not active")
-        
-        /*
-        zeroBtn.backgroundColor = .lightGray
-        zeroBtn.layer.cornerRadius = 5
-        zeroBtn.layer.borderWidth = 1
-        zeroBtn.layer.borderColor = UIColor.black.cgColor
-        */
     }
     
     // switches the current mode
@@ -69,6 +68,7 @@ class ViewController: UIViewController {
                     displayLabel.text = decimalToBinary(displayLabel.text!)
                 }
                 else if newMode == "octal" {
+                    numBtnsState("octal")
                     currentMode = "octal"
                     octalBtn.backgroundColor = .black
                     
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
                     displayLabel.text = binaryToDecimal(displayLabel.text!)
                 }
                 else if newMode == "octal" {
-                    numBtnsState("active")
+                    numBtnsState("octal")
                     currentMode = "octal"
                     octalBtn.backgroundColor = .black
                     
@@ -154,7 +154,7 @@ class ViewController: UIViewController {
                 }
                 else {
                     letterBtnsState("not active")
-                    numBtnsState("active")
+                    numBtnsState("octal")
                     currentMode = "octal"
                     octalBtn.backgroundColor = .black
                     
@@ -263,6 +263,37 @@ class ViewController: UIViewController {
             
             sevenBtn.setTitleColor(.lightGray, for: .normal)
             sevenBtn.isEnabled = false
+            
+            eightBtn.setTitleColor(.lightGray, for: .normal)
+            eightBtn.isEnabled = false
+            
+            nineBtn.setTitleColor(.lightGray, for: .normal)
+            nineBtn.isEnabled = false
+        }
+        else if state == "octal" {
+            zeroBtn.setTitleColor(.black, for: .normal)
+            zeroBtn.isEnabled = true
+            
+            oneBtn.setTitleColor(.black, for: .normal)
+            oneBtn.isEnabled = true
+            
+            twoBtn.setTitleColor(.black, for: .normal)
+            twoBtn.isEnabled = true
+            
+            threeBtn.setTitleColor(.black, for: .normal)
+            threeBtn.isEnabled = true
+            
+            fourBtn.setTitleColor(.black, for: .normal)
+            fourBtn.isEnabled = true
+            
+            fiveBtn.setTitleColor(.black, for: .normal)
+            fiveBtn.isEnabled = true
+            
+            sixBtn.setTitleColor(.black, for: .normal)
+            sixBtn.isEnabled = true
+            
+            sevenBtn.setTitleColor(.black, for: .normal)
+            sevenBtn.isEnabled = true
             
             eightBtn.setTitleColor(.lightGray, for: .normal)
             eightBtn.isEnabled = false
